@@ -1,0 +1,12 @@
+#!/bin/sh
+
+regex="(add|fix|rft) .+"
+var=`head -n 1 $1`
+message="[POLICY] Commit need to be \"[add|fix|rft] message\""
+
+if ! [[ "$var" =~ $regex ]]
+then
+  echo $message
+  exit 1
+fi
+
