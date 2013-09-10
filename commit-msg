@@ -1,6 +1,6 @@
 #!/bin/sh
 
-regex="(add|fix|rft) .+"
+regex="(ADD|FIX|RFT) - .+"
 var=`head -n 1 $1`
 message="[POLICY] Commit need to be \"[add|fix|rft] message\""
 
